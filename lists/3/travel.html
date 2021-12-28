@@ -69,7 +69,16 @@
                                 <div class="post-info">|</div>
                                 <a href="travel.html" class="post-info when-link">More</a>
                             </div>
-                            在git bash里面进行用户名和邮箱设置 <br>git config --global user.name "用户名" (回车)<br> git config --global user.email "输入邮箱" (回车)<br><br>
+                            在git bash里面进行用户名和邮箱设置 <br>git config --global user.name "用户名" (回车)
+                            <br> git config --global user.email "输入邮箱" (回车)<br><p>
+                                cmd命令配置ssl证书<br>
+                                $ ssh-keygen -t rsa -C "邮箱"<br>
+                                在本地生成rsa证书后，打开 id_rsa.pub，复制里面的全部内容<br>
+                                回到 github 进入 Account => Settings-选择 SSH and GPG keys-点击 New SSH key-粘贴生成的代码<br>
+                                <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank">官方文档</a>
+
+                            </p>
+                            <br>
                             <b style="color: red;">1.HTTPS: <br> Git clone https://github.com/你的项目仓库.git</b>
                             <p>添加你想要上传的文件到克隆的项目里
                                 <br>git init (记得初始化)
@@ -94,6 +103,17 @@
                             </p>
                             <p>2. 删除本地文件与远程分支文件 删除文件filename <br> git rm filename <br> git commit -m "delete file filename " <br> git push -u origin master(此处是当前分支的名字) <br> <br> 删除文件夹directoryname <br> git rm -r directoryname <br> git commit -m "delete directory
                                 directoryname " <br> git push -u origin master(此处是当前分支的名字)</p>
+                            <b style="color: red;">Failed to connect to github.com port 443 after 21074</b>
+                            <br>
+                            <p><img src="./443.png" alt="photo">
+                            可能是当前网络没有办法访问github，建议科学上网，挂代理，如果还不行，那就换别的方法</p>
+                        </b>
+                        <br><br>
+                        <b style="color: red;"> OpenSSL SSL_read: Connection was reset, errno 10054
+                            <p><img src="./ssl.png" alt="photo">建议重新执行2.ssh那几行</p>
+
+
+
 
                         </div>
                         <!-- <a href="https://pattern.monster/" class="button-round w-button">Continue reading →</a> -->
